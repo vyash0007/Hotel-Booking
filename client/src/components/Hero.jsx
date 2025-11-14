@@ -25,13 +25,13 @@ const Hero = () => {
     }
 
     return (
-        <div className='flex flex-col items-start justify-center px-6 md:px-16 lg:px-24 xl:px-32 text-white bg-[url("/src/assets/heroImage.png")] bg-no-repeat bg-cover bg-center h-screen'>
+        <div className='relative flex flex-col items-start justify-center px-6 md:px-16 lg:px-24 xl:px-32 text-white bg-[url("/public/HotelCover1.0.1.jpg")] bg-no-repeat bg-cover bg-center h-screen before:content-[""] before:absolute before:inset-0 before:bg-black/40'>
 
-            <p className='bg-[#49B9FF]/50 px-3.5 py-1 rounded-full mt-20'>The Ultimate Hotel Experience</p>
-            <h1 className='font-playfair text-2xl md:text-5xl md:text-[56px] md:leading-[56px] font-bold md:font-extrabold max-w-xl mt-4'>Discover Your Perfect Gateway Destination</h1>
-            <p className='max-w-130 mt-2 text-sm md:text-base'>Unparalleled luxury and comfort await at the world's most exclusive hotels and resorts. Start your journey today.</p>
+            <p className='relative z-10 bg-[#49B9FF]/70 px-3.5 py-1 rounded-full mt-20 backdrop-blur-sm'>Your Haven Awaits</p>
+            <h1 className='relative z-10 font-playfair text-2xl md:text-5xl md:text-[56px] md:leading-[56px] font-bold md:font-extrabold max-w-xl mt-4 drop-shadow-lg'>Find Your Escape in Paradise</h1>
+            <p className='relative z-10 max-w-130 mt-2 text-sm md:text-base drop-shadow-md'>Experience unforgettable stays at handpicked destinations worldwide. Where every moment becomes a cherished memory.</p>
 
-            <form onSubmit={onSearch} className='bg-white text-gray-500 rounded-lg px-6 py-4 mt-8 flex flex-col md:flex-row max-md:items-start gap-4 max-md:mx-auto'>
+            <form onSubmit={onSearch} className='relative z-10 bg-white text-gray-500 rounded-lg px-6 py-4 mt-8 flex flex-col md:flex-row max-md:items-start gap-4 max-md:mx-auto shadow-xl'>
 
                 <div>
                     <div className='flex items-center gap-2'>

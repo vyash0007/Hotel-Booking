@@ -15,7 +15,6 @@ const Navbar = () => {
     const navLinks = [
         { name: 'Home', path: '/' },
         { name: 'Hotels', path: '/rooms' },
-        { name: 'Experience', path: '/' },
         { name: 'About', path: '/' },
     ];
 
@@ -46,7 +45,7 @@ const Navbar = () => {
     return (
         <nav className={`fixed top-0 left-0 w-full flex items-center justify-between px-4 md:px-16 lg:px-24 xl:px-32 transition-all duration-500 z-50 ${isScrolled ? "bg-white/80 shadow-md text-gray-700 backdrop-blur-lg py-3 md:py-4" : "py-4 md:py-6"}`}>
             <Link to="/">
-                <img src={assets.logo} alt="logo" className={`h-9 ${isScrolled && "invert opacity-80"}`} />
+                <img src={assets.logo} alt="logo" className="h-14 md:h-16 object-contain" />
             </Link>
 
             <div className="hidden md:flex items-center gap-4 lg:gap-8">
@@ -66,7 +65,6 @@ const Navbar = () => {
             </div>
 
             <div className="hidden md:flex items-center gap-4">
-                <img src={assets.searchIcon} alt="search" className={`${isScrolled && "invert"} h-7 transition-all duration-500`} />
                 {user ? (
                     <UserButton >
                         <UserButton.MenuItems>
@@ -74,7 +72,7 @@ const Navbar = () => {
                         </UserButton.MenuItems>
                     </UserButton>
                 ) : (
-                    <button onClick={openSignIn} className="bg-black text-white px-8 py-2.5 rounded-full ml-4 transition-all duration-500 cursor-pointer">
+                    <button onClick={openSignIn} className="bg-black text-white px-8 py-2.5 rounded-full transition-all duration-500 cursor-pointer">
                         Login
                     </button>
                 )}

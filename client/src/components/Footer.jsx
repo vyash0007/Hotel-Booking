@@ -6,7 +6,7 @@ const Footer = () => {
         <div className='bg-[#F6F9FC] text-gray-500/80 pt-8 px-6 md:px-16 lg:px-24 xl:px-32'>
             <div className='flex flex-wrap justify-between gap-12 md:gap-6'>
                 <div className='max-w-80'>
-                    <img src={assets.logo} alt="logo" className='mb-4 h-8 md:h-9 invert opacity-80' />
+                    <img src={assets.logo} alt="logo" className='mb-4 h-10 md:h-12 object-contain' />
                     <p className='text-sm'>
                         Discover the world's most extraordinary places to stay, from boutique hotels to luxury villas and private islands.
                     </p>
@@ -55,7 +55,7 @@ const Footer = () => {
             </div>
             <hr className='border-gray-300 mt-8' />
             <div className='flex flex-col md:flex-row gap-2 items-center justify-between py-5'>
-                <p>© {new Date().getFullYear()} QuickStay. All rights reserved.</p>
+                <p>© {new Date().getFullYear()} Haven. All rights reserved.</p>
                 <ul className='flex items-center gap-4'>
                     <li><a href="#">Privacy</a></li>
                     <li><a href="#">Terms</a></li>
