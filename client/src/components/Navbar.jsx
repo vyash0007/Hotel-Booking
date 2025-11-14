@@ -44,8 +44,9 @@ const Navbar = () => {
 
     return (
         <nav className={`fixed top-0 left-0 w-full flex items-center justify-between px-4 md:px-16 lg:px-24 xl:px-32 transition-all duration-500 z-50 ${isScrolled ? "bg-white/80 shadow-md text-gray-700 backdrop-blur-lg py-3 md:py-4" : "py-4 md:py-6"}`}>
-            <Link to="/">
+            <Link to="/" className="flex items-center gap-1">
                 <img src={assets.logo} alt="logo" className="h-14 md:h-16 object-contain" />
+                <span className={`font-playfair text-2xl md:text-3xl font-bold transition-colors ${isScrolled ? 'text-gray-800' : 'text-white'}`}>Haven</span>
             </Link>
 
             <div className="hidden md:flex items-center gap-4 lg:gap-8">
@@ -88,6 +89,11 @@ const Navbar = () => {
                 <button className="absolute top-4 right-4" onClick={() => setIsMenuOpen(false)} >
                     <img src={assets.closeMenu} alt="close-menu" className="h-6.5" />
                 </button>
+
+                <div className="flex items-center gap-1 mb-4">
+                    <img src={assets.logo} alt="logo" className="h-12 object-contain" />
+                    <span className="font-playfair text-2xl font-bold text-gray-800">Haven</span>
+                </div>
 
                 {navLinks.map((navLink) => (
                     <NavLink key={navLink.name} to={navLink.path} onClick={() => setIsMenuOpen(false)}>
